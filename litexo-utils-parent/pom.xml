@@ -19,6 +19,7 @@
   
     <commons-lang3.version>3.6</commons-lang3.version>
     <slf4j-log4j12.version>1.8.0-alpha2</slf4j-log4j12.version>
+    <junit.version>5.1.0-M1</junit.version>
   </properties>
 
   <profiles>
@@ -158,6 +159,13 @@
     </dependency>
 
     <!--Testing-->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
     <dependency>
       <groupId>org.powermock</groupId>
       <artifactId>powermock-module-junit4</artifactId>
