@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * www.litexo.de
- * 
+ *
  * @author Andreas Hauschild
  */
 public class GroupingContainer<T> {
@@ -17,10 +17,6 @@ public class GroupingContainer<T> {
         List<List<T>> result = new ArrayList<>();
         int currentIndex = 0;
         for (int i = 0; i < this.getItems().size(); i++) {
-
-
-
-
             if (!indexExists(result, currentIndex)) {
                 result.add(currentIndex, new ArrayList<>());
             }
@@ -29,16 +25,12 @@ public class GroupingContainer<T> {
             if (result.get(currentIndex).size() >= itemLimitPerGroup) {
                 currentIndex++;
             }
-
-
         }
         return result;
     }
 
     public List<List<T>> getGroupsByMaxGroupLimit(int maxGroups) {
-
         List<List<T>> result = new ArrayList<>();
-
         int itemCount = 0;
         for (int i = 0; i < this.getItems().size(); i++) {
             if (itemCount / maxGroups != 0) {
